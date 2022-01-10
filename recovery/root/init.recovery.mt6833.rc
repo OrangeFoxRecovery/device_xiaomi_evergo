@@ -35,6 +35,16 @@ on post-fs
     symlink /dev/block/mapper/pl_a /dev/block/platform/bootdevice/by-name/preloader_raw_a
     symlink /dev/block/mapper/pl_b /dev/block/platform/bootdevice/by-name/preloader_raw_b
 
+    # MediaTek Preloader Utils
+    start mtk.plpath.utils.link
+
     # Start the Boot HAL
     start boot-hal-1-2
 
+service mtk.plpath.utils.link /system/bin/mtk_plpath_utils
+    class main
+    user root
+    group root system
+    oneshot
+    disabled
+    seclabel u:r:recovery:s0
