@@ -53,6 +53,10 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
     fastbootd
 
+# MediaTek Preloader Utils
+PRODUCT_PACKAGES += \
+    mtk_plpath_utils.recovery
+
 # Soong Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
