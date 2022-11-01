@@ -21,11 +21,10 @@ service teei_daemon /system/bin/teei_daemon \
     -t 98fb95bcb4bf42d26473eae48690d7ea \
     -t 7b66512021214487ba710a51d7ea78fe \
     -t 09010000000000000000000000000000
-    class core
-    user system
-    group system
+    user root
+    group root
     disabled
-   # oneshot
+    seclabel u:r:recovery:s0
 
 on boot
     chown system system /sys/bus/platform/devices/utos/dcih_notify_test
