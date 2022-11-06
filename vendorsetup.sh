@@ -57,6 +57,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export TARGET_DEVICE_ALT="evergreen,opal"
 	export OF_TARGET_DEVICES="evergo,evergreen,opal"
 	export FOX_RECOVERY_BOOT_PARTITION="/dev/block/platform/bootdevice/by-name/boot"
+	export OF_FL_PATH1="/system/flashlight"
 
 	# Magisk
 	export FOX_USE_SPECIFIC_MAGISK_ZIP=~/Magisk/Magisk-v25.2.zip
